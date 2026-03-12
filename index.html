@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Assinatura de Email</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Gerador de Assinatura de Email</h1>
+
+<div class="form">
+
+<label>Nome</label>
+<input type="text" id="nome" placeholder="Seu nome">
+
+<label>Cargo</label>
+<input type="text" id="cargo" placeholder="Seu cargo">
+
+<label>Email</label>
+<input type="text" id="email" placeholder="seu@email.com">
+
+<label>Telefone</label>
+<input type="text" id="telefone" placeholder="(00) 00000‑0000">
+
+<label>Website</label>
+<input type="text" id="site" placeholder="www.seusite.com">
+
+<button onclick="gerar()">Gerar assinatura</button>
+
+</div>
+
+<div class="resultado">
+
+<h2>Pré‑visualização</h2>
+
+<div id="assinatura"></div>
+
+<button onclick="copiar()">Copiar assinatura</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

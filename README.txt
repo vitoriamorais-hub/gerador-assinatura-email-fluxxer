@@ -1,0 +1,1 @@
+Abra o arquivo index.html no navegador para usar o gerador. Depois envie estes arquivos para um repositório GitHub e ative o GitHub Pages.
