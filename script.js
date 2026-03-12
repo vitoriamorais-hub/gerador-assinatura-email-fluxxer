@@ -6,73 +6,61 @@ let email = document.getElementById("email").value
 let telefone = document.getElementById("telefone").value
 
 let fotoInput = document.getElementById("foto")
-let logoInput = document.getElementById("logo")
 
 let foto = ""
-let logo = ""
 
 if(fotoInput.files.length > 0){
+
 let readerFoto = new FileReader()
+
 readerFoto.onload = function(e){
+
 foto = e.target.result
-gerarLogo()
+
+montarAssinatura(nome,cargo,email,telefone,foto)
+
 }
+
 readerFoto.readAsDataURL(fotoInput.files[0])
-}else{
-gerarLogo()
-}
-
-function gerarLogo(){
-
-if(logoInput.files.length > 0){
-
-let readerLogo = new FileReader()
-
-readerLogo.onload = function(e){
-
-logo = e.target.result
-
-montarAssinatura(nome,cargo,email,telefone,site,foto,logo)
-
-}
-
-readerLogo.readAsDataURL(logoInput.files[0])
 
 }else{
 
-montarAssinatura(nome,cargo,email,telefone,site,foto,"")
+montarAssinatura(nome,cargo,email,telefone,"")
 
 }
 
 }
 
-}
-
-function montarAssinatura(nome,cargo,email,telefone,site,foto,logo){
+function montarAssinatura(nome,cargo,email,telefone,foto){
 
 let assinatura = `
-<table style="font-family:Arial;line-height:1.6">
+<table style="font-family:Arial, Helvetica, sans-serif; line-height:1.4">
 
 <tr>
 
-<td style="padding-right:15px">
+<td style="vertical-align:top; padding-right:15px">
 
-${foto ? `<img src="${foto}" width="80" style="border-radius:50%">` : ""}
+${foto ? `<img src="${foto}" width="90" height="90" style="border-radius:50%; object-fit:cover;">` : ""}
 
 </td>
 
-<td style="border-left:3px solid #75529D;padding-left:15px">
+<td style="vertical-align:top">
 
-<strong style="font-size:16px;color:#75529D">${nome}</strong><br>
-<span style="color:#555">${cargo}</span><br><br>
+<div style="font-size:18px; font-weight:bold; color:#75529D;">
+${nome}
+</div>
 
-📧 ${email}<br>
-📞 ${telefone}<br>
-🌐 ${site}
+<div style="color:#666; font-size:14px; margin-bottom:6px;">
+${cargo}
+</div>
 
-<br><br>
+<div style="font-size:13px; color:#75529D;">
+${email} | ${telefone} | fluxxer.com.br
+</div>
 
-${logo ? `<img src="${logo}" width="120">` : ""}
+<br>
+
+<img src="https://fluxxer.com.br/wp-content/uploads/logo-fluxxer.png" width="120">
 
 </td>
 
