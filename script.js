@@ -1,9 +1,9 @@
 function gerar(){
 
-const nome = document.getElementById("nome").value || ""
-const cargo = document.getElementById("cargo").value || ""
-const email = document.getElementById("email").value || ""
-const telefone = document.getElementById("telefone").value || ""
+const nome = document.getElementById("nome").value
+const cargo = document.getElementById("cargo").value
+const email = document.getElementById("email").value
+const telefone = document.getElementById("telefone").value
 
 const fotoInput = document.getElementById("foto")
 
