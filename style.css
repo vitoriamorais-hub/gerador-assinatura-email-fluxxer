@@ -18,6 +18,7 @@ box-shadow:0 5px 20px rgba(0,0,0,0.1);
 h1{
 text-align:center;
 margin-bottom:30px;
+color:#75529D;
 }
 
 label{
@@ -38,12 +39,11 @@ button{
 margin-top:20px;
 width:100%;
 padding:12px;
-background:#000;
+background:#75529D;
 color:white;
 border:none;
 border-radius:6px;
 cursor:pointer;
-font-size:14px;
 }
 
 button:hover{
