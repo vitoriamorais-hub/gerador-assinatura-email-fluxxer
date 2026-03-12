@@ -27,7 +27,7 @@ montarAssinatura(nome,cargo,email,telefone,"")
 
 function montarAssinatura(nome,cargo,email,telefone,foto){
 
-const logo = "https://fluxxer.com.br/wp-content/uploads/2026/02/3-300x101.png"
+const logo = "https://fluxxer.com.br/wp-content/uploads/2026/02/3.png"
 
 const assinatura = `
 <table style="font-family:Arial, Helvetica, sans-serif; line-height:1.4">
